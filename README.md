@@ -1,23 +1,36 @@
 # Backdoor Data Poisoning in Federated Phishing-Email Detection
-
+<div align="center">
+<br>
+   
 *Read this in another language: [Tiếng Việt](README.vi.md)*
 
-A reproducible research codebase for studying **backdoor attacks via data poisoning**
-against a **Federated Learning (FL)** phishing-email detector, using **LLM-generated
-semantic triggers**, and for benchmarking **ten server-side Robust Aggregation defences**
-against them.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.2+-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Flower](https://img.shields.io/badge/Flower-1.8+-30B6A5?style=flat-square)
+![DistilBERT](https://img.shields.io/badge/%F0%9F%A4%97%20DistilBERT-base-FFD21E?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-131%20passing-22C55E?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-3DA639?style=flat-square)
 
-The central question: *how many compromised clients does it take to plant a backdoor that
-survives training, and which server-side defence actually stops it?*
+A reproducible research codebase for studying **backdoor attacks via data poisoning**<br>
+against a **Federated Learning** phishing-email detector, using **LLM-generated semantic triggers**,<br>
+and for benchmarking **ten server-side Robust Aggregation defences** against them.
+
+*How many compromised clients does it take to plant a backdoor that survives training,*<br>
+*and which server-side defence actually stops it?*
+
+</div>
+
+<br>
 
 | Component | Choice |
 |---|---|
-| Dataset | [`zefang-liu/phishing-email-dataset`](https://huggingface.co/datasets/zefang-liu/phishing-email-dataset) — 14,624 emails, balanced 1:1 |
-| Classifier | DistilBERT-base (~66M parameters) |
-| FL framework | [Flower](https://flower.ai) (`flwr`) — 10 clients, 10 rounds |
-| Trigger-generating LLM | `gpt-oss` served locally through [Ollama](https://ollama.com) |
-| Defences | FedAvg, Median, Trimmed Mean, Multi-Krum, Norm-Clipping, FLTrust, FoolsGold, FLTrust+Clip, RLR, SA-Trust |
+| **Dataset** | [`zefang-liu/phishing-email-dataset`](https://huggingface.co/datasets/zefang-liu/phishing-email-dataset) — 14,624 emails, balanced 1:1 |
+| **Classifier** | DistilBERT-base (~66M parameters) |
+| **FL framework** | [Flower](https://flower.ai) (`flwr`) — 10 clients, 10 rounds |
+| **Trigger-generating LLM** | `gpt-oss` served locally through [Ollama](https://ollama.com) |
+| **Defences** | FedAvg · Median · Trimmed Mean · Multi-Krum · Norm-Clipping · FLTrust · FoolsGold · FLTrust+Clip · RLR · SA-Trust |
 
+> [!IMPORTANT]
 > **Ethics and intended use.** This is defensive security research. Everything runs in a
 > local simulation against a public academic dataset; nothing here targets a live system.
 > The purpose is to quantify how fragile federated phishing detection is under data
@@ -479,10 +492,10 @@ If this code is useful in your work, please cite it:
 
 ```bibtex
 @software{fl_phishing_backdoor,
-  author  = {<Your Name>},
+  author  = {Vy Duong Chi},
   title   = {Backdoor Data Poisoning in Federated Phishing-Email Detection},
   year    = {2026},
-  url     = {https://github.com/<your-username>/<repo-name>}
+  url     = {https://github.com/chivy-debug/FedPhish-Backdoor-Benchmark}
 }
 ```
 

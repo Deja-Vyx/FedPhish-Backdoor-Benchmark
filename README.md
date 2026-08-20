@@ -495,7 +495,7 @@ If this code is useful in your work, please cite it:
   author  = {Vy Duong Chi},
   title   = {Backdoor Data Poisoning in Federated Phishing-Email Detection},
   year    = {2026},
-  url     = {https://github.com/chivy-debug/FedPhish-Backdoor-Benchmark}
+  url     = {https://github.com/Deja-Vyx/FedPhish-Backdoor-Benchmark}
 }
 ```
 
